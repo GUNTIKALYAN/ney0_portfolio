@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
+html{
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -262,13 +266,22 @@ a {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        /* transform: translateY(30px); */
+        transform: translateY(-80px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
+.drop-down {
+    animation: dropDown 2s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+
 
 @keyframes fadeIn {
     from {
@@ -300,6 +313,59 @@ a {
 
 
 /* About section css */
+
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.4;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.scroll{
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.scroll-right {
+    animation: slideInRight 2s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.scroll-left {
+    animation: slideInLeft 2s ease-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
 
 
 .about__section {
@@ -351,3 +417,115 @@ a {
   margin-bottom: 1rem;
   line-height: 1.6;
 }
+
+.skills__section .section__title {
+  text-align: left;
+  margin-left: 20px;
+}
+
+
+.skills__section {
+  padding: 150px;
+  margin-top: -150px; 
+    width: 100%;
+}
+
+.skills__container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.skills__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill__item {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 120px;
+  transition: transform 0.3s;
+}
+
+.skill__item i {
+  font-size: 40px;
+  color: #4a4a4a;
+  margin-bottom: 10px;
+}
+
+
+.skill__item img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.skill__item p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.skill__item:hover {
+  transform: translateY(-10px);
+}
+
+
+@keyframes scrollUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.scroll-up {
+  animation: scrollUp 1.2s ease-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+
+@keyframes dropletBounce {
+  0% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.skill__item i {
+  font-size: 40px;
+  color: #4a4a4a;
+  margin-bottom: 10px;
+  animation: dropletBounce 1s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+
+.skill__item:nth-child(1) i { animation-delay: 0s; }
+.skill__item:nth-child(2) i { animation-delay: 0.1s; }
+.skill__item:nth-child(3) i { animation-delay: 0.2s; }
+.skill__item:nth-child(4) i { animation-delay: 0.3s; }
+.skill__item:nth-child(5) i { animation-delay: 0.4s; }
+.skill__item:nth-child(6) i { animation-delay: 0.5s; }
+
+
+
