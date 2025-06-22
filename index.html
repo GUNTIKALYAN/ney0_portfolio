@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assests/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    
     <title>portfolio</title>
 </head>
 <body>
@@ -28,7 +31,7 @@
             </div>
         </nav>
     </header>
-    <section class="hero" id="home">
+    <section class="hero drop-down " id="home">
         <div class="home_container bd-grid">
             <div class="home__data fade-in">
                 <h1 class="home__title">Hi,<br>I’m <span class="typewriter-text">Kalyan</span></h1>
@@ -55,21 +58,58 @@
 
     <!-- About section -->
 
-    <section id="about" class="about__section">
+    <section id="about" class="about__section ">
         <div class="about__container">
-            <h2 class="section__title">About Me</h2>
+            <h2 class="section__title scroll-left">About Me</h2>
             <div class="about__content">
-                <div class="about__image">
+                <div class="about__image scroll">
                 <img src="/assests/img/photo.jpg" alt="About Image" />
                 </div>
 
-                <div class="about__text">
-                    <p class="about__description">'m Kalyan, a passionate Web Developer and Data Science enthusiast. I love turning ideas into interactive, functional web applications and creating intelligent, data-driven solutions.</p>
+                <div class="about__text scroll-right">
+                    <p class="about__description">Im Kalyan, a passionate Web Developer and Data Science enthusiast. I love turning ideas into interactive, functional web applications and creating intelligent, data-driven solutions.</p>
                     <p class="about__description">My journey blends creativity with logic—from frontend design to backend architecture and machine learning integration. I'm always eager to learn, build, and collaborate on impactful tech projects.</p>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <!-- Skills -->
+    
+    <section id="skills" class="skills__section scroll">
+        <div class="skills__container">
+            <h2 class="section__title scroll-left">My Skills</h2>
+
+            <div class="skills__grid dropletBounce">
+                <div class="skill__item ">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML</p>
+                </div>
+                <div class="skill__item scroll-left">
+                    <i class="fab fa-css3-alt"></i>
+                    <p>CSS</p>
+                </div>
+                <div class="skill__item scroll-right">
+                    <i class="fab fa-js-square"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill__item scroll-left">
+                    <i class="fab fa-react"></i>
+                    <p>React</p>
+                </div>
+                <div class="skill__item scroll-right">
+                    <i class="fab fa-python"></i>
+                    <p>Python</p>
+                </div>
+                <div class="skill__item scroll-left">
+                    <i class="fas fa-robot"></i>
+                    <p>Machine Learning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
 
