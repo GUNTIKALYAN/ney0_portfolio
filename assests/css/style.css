@@ -346,7 +346,7 @@ a {
 .scroll-right {
     animation: slideInRight 2s ease-out;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 30%; 
 }
 
 @keyframes slideInLeft {
@@ -366,11 +366,11 @@ a {
     animation-range: entry 0% cover 40%;
 }
 
-
+/* Right Side Content */
 
 .about__section {
   width: 100%;
-  padding: 4rem 0;
+  padding: 2rem;
   background-color: #0f111a;
 }
 
@@ -381,23 +381,26 @@ a {
 }
 
 .section__title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #00ff88;
   margin-bottom: 2rem;
-  margin-top: auto;
-
 }
 
 .about__content {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
+.about__image {
+  flex: 1 1 250px;
+  max-width: 250px;
+}
+
 .about__image img {
-  width: 250px;
+  width: 100%;
   height: 250px;
   border-radius: 50%;
   object-fit: cover;
@@ -406,21 +409,60 @@ a {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+.about__info-boxes,
 .about__text {
-  flex: 1;
-  min-width: 280px;
+  flex: 1 1 500px;
+}
+
+.about__info-boxes {
+  margin-bottom: 1.5rem;
+}
+
+/* Education Box */
+.info-box {
+  background-color: #f4f4f4;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  margin-top: 2rem;
+  margin-left: 100px;
+}
+
+.info-box h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #222;
+}
+
+.info-box p {
+  font-size: 1rem;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+/* About Text */
+.about__text {
   color: white;
+  margin-left: 380px;
 }
 
 .about__description {
+  font-size: 1.1rem;
   color: #ccc;
   margin-bottom: 1rem;
   line-height: 1.6;
 }
 
+
+
+
+/* Skills */
+
 .skills__section .section__title {
   text-align: left;
-  margin-left: 20px;
+  margin-left: -15px;
 }
 
 
@@ -429,6 +471,8 @@ a {
   margin-top: -150px; 
     width: 100%;
 }
+
+
 
 .skills__container {
   max-width: 1100px;
@@ -447,7 +491,7 @@ a {
   background: white;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(235, 227, 227, 0.399);
   width: 120px;
   transition: transform 0.3s;
 }
@@ -459,39 +503,18 @@ a {
 }
 
 
-.skill__item img {
-  width: 40px;
-  margin-bottom: 10px;
-}
 
 .skill__item p {
   margin: 0;
   font-weight: 500;
   font-size: 16px;
+  color: #00cc6a;
 }
 
 .skill__item:hover {
   transform: translateY(-10px);
+  cursor: pointer;
 }
-
-
-@keyframes scrollUp {
-  from {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.scroll-up {
-  animation: scrollUp 1.2s ease-out;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-}
-
 
 @keyframes dropletBounce {
   0% {
