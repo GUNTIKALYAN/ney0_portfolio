@@ -655,6 +655,7 @@ a {
   gap: 30px;
   max-width: 1200px;
   margin: auto;
+  margin-left: 50px;
 }
 
 .project-card {
@@ -709,9 +710,78 @@ a {
   margin: 0 5px;
   border-radius: 5px;
   font-size: 0.9rem;
-  transition: background 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .project-links a:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    gap: 20px;
+    margin-left: -150px;
+  }
+
+  .project-card {
+    max-width: 280px;
+  }
+
+  .project-card img {
+    height: 160px;
+  }
+
+  .project-info h3 {
+    font-size: 1.1rem;
+  }
+  .projects-section h2{
+    margin-left: -200px;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+
+  }
+
+  .project-links a {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .projects-container {
+    gap: 20px;
+    margin-right: 300px;
+  }
+
+  .project-card {
+    max-width: 260px;
+  }
+
+  .project-card img {
+    height: 140px;
+  }
+
+  .project-info {
+    padding: 15px;
+  }
+
+  .project-info h3 {
+    font-size: 1rem;
+  }
+
+  .project-info p {
+    font-size: 0.85rem;
+  }
+
+  .project-links a {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
 }
