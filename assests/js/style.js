@@ -28,3 +28,35 @@ const sections = document.querySelectorAll("section[id]");
       }
     });
   });
+
+
+
+const btn = document.getElementById('button');
+const form = document.getElementById('form');
+
+// ✅ Initialize EmailJS with public key
+emailjs.init(EMAIL_CONFIG.PUBLIC_KEY);
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  btn.innerText = 'Sending...';
+
+  const serviceID = EMAIL_CONFIG.SERVICE_ID;
+  const templateID = EMAIL_CONFIG.TEMPLATE_ID;
+
+  emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.innerText = 'Submitted';
+      form.reset();
+      setTimeout(() => {
+        btn.innerText = 'Send Message 🚀'
+      }, 3000);
+    }, (err) => {
+      console.error('EmailJS error :',err);
+      btn.innerText = 'Falied';
+      setTimeout(() => {
+        btn.innerText = 'Send Message 🚀';
+      },3000);
+    });
+});
