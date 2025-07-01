@@ -31,10 +31,11 @@ const sections = document.querySelectorAll("section[id]");
 
 
 
+
 const btn = document.getElementById('button');
 const form = document.getElementById('form');
 
-// ✅ Initialize EmailJS with public key
+// Initialize EmailJS with public key
 emailjs.init(EMAIL_CONFIG.PUBLIC_KEY);
 
 form.addEventListener('submit', function(event) {
@@ -44,19 +45,37 @@ form.addEventListener('submit', function(event) {
 
   const serviceID = EMAIL_CONFIG.SERVICE_ID;
   const templateID = EMAIL_CONFIG.TEMPLATE_ID;
+  const templateownerID = EMAIL_CONFIG.OWNER_TEMPLATE_ID;
 
+  // Send auto-reply to user
   emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-      btn.innerText = 'Submitted';
-      form.reset();
-      setTimeout(() => {
-        btn.innerText = 'Send Message 🚀'
-      }, 3000);
-    }, (err) => {
-      console.error('EmailJS error :',err);
-      btn.innerText = 'Falied';
+      //  Then send a copy to owner
+      emailjs.sendForm(serviceID, templateownerID, this)
+        .then(() => {
+          console.log("Form sent to Owner");
+
+          btn.innerText = 'Submitted';
+          form.reset(); 
+
+          setTimeout(() => {
+            btn.innerText = 'Send Message 🚀';
+          }, 3000);
+        })
+        .catch((err) => {
+          alert('Failed to send confirmation email to user. Please try again.');
+          btn.innerText = 'Failed';
+          setTimeout(() => {
+            btn.innerText = 'Send Message 🚀';
+          }, 3000);
+        });
+    })
+    .catch((err) => {
+      console.error('EmailJS error (user reply):', err);
+      alert('Failed to send form to owner. Please check internet or try later.');
+      btn.innerText = 'Failed';
       setTimeout(() => {
         btn.innerText = 'Send Message 🚀';
-      },3000);
+      }, 3000);
     });
 });
