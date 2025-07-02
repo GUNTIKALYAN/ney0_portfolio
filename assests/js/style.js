@@ -36,11 +36,10 @@ const btn = document.getElementById('button');
 const form = document.getElementById('form');
 
 // Initialize EmailJS with public key
-emailjs.init(EMAIL_CONFIG.PUBLIC_KEY);
+// emailjs.init(EMAIL_CONFIG.PUBLIC_KEY);
 
 form.addEventListener('submit', function(event) {
   event.preventDefault();
-
   btn.innerText = 'Sending...';
 
   const serviceID = EMAIL_CONFIG.SERVICE_ID;
@@ -54,20 +53,19 @@ form.addEventListener('submit', function(event) {
       emailjs.sendForm(serviceID, templateownerID, this)
         .then(() => {
           console.log("Form sent to Owner");
-
           btn.innerText = 'Submitted';
           form.reset(); 
 
           setTimeout(() => {
             btn.innerText = 'Send Message 🚀';
-          }, 3000);
+          }, 2000);
         })
         .catch((err) => {
           alert('Failed to send confirmation email to user. Please try again.');
           btn.innerText = 'Failed';
           setTimeout(() => {
             btn.innerText = 'Send Message 🚀';
-          }, 3000);
+          }, 2000);
         });
     })
     .catch((err) => {
@@ -76,6 +74,6 @@ form.addEventListener('submit', function(event) {
       btn.innerText = 'Failed';
       setTimeout(() => {
         btn.innerText = 'Send Message 🚀';
-      }, 3000);
+      }, 2000);
     });
 });
