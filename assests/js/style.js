@@ -1,9 +1,6 @@
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 
-navToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('open');
-});
 
 
 
@@ -14,7 +11,7 @@ const sections = document.querySelectorAll("section[id]");
     let scrollY = window.pageYOffset;
 
     sections.forEach(current => {
-      const sectionTop = current.offsetTop - 100;
+      const sectionTop = current.offsetTop - 150;
       const sectionHeight = current.offsetHeight;
       const sectionId = current.getAttribute("id");
 
@@ -29,6 +26,24 @@ const sections = document.querySelectorAll("section[id]");
     });
   });
 
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('open');
+
+  if (navMenu.classList.contains('open')) {
+    navToggle.style.color = '#00ff88'; 
+  } else {
+    navToggle.style.color = ''; 
+  }
+});
+
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('open');
+    navToggle.style.color = ''; // reset color
+    navToggle.classList.remove('active');
+  });
+});
 
 
 
