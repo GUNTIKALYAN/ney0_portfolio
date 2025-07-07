@@ -51,7 +51,7 @@ const btn = document.getElementById('button');
 const form = document.getElementById('form');
 
 // Initialize EmailJS with public key
-// emailjs.init(EMAIL_CONFIG.PUBLIC_KEY);
+emailjs.init(EMAIL_CONFIG.PUBLIC_KEY);
 
 form.addEventListener('submit', function(event) {
   event.preventDefault();
