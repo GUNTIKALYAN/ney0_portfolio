@@ -263,6 +263,9 @@ a {
 
 /* Tablet styles (768px and below) */
 @media screen and (max-width: 768px) {
+    #home{
+      margin-top: 50px;
+    }
     .home_container {
         flex-direction: column;
         padding: 50px 20px;
@@ -505,8 +508,8 @@ a {
 
 .scroll-right {
     animation: slideInRight 2s ease-out;
-    animation-duration: 2s;
-    animation-timing-function: ease-out; 
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
 
 @keyframes slideInLeft {
@@ -613,6 +616,7 @@ a {
 @media screen and (max-width: 768px) {
   #about {
     padding: 60px 40px;
+    scroll-margin-top: 50px;
   }
 
   .about__container {
@@ -626,7 +630,8 @@ a {
   }
 
   .about__image {
-    max-width: 200px;
+    margin-top: 25px;
+    width: 200px;
     order: 1;
   }
 
@@ -650,6 +655,7 @@ a {
     margin-left: 0;
     text-align: left;
     order: 3;
+    margin-top: -250px;
   }
 
   .section__title {
@@ -880,6 +886,7 @@ a {
 @media screen and (max-width: 768px) {
   .skills__section {
     padding: 60px 40px;
+    margin-top: -300px;
   }
 
   .skills__container {
@@ -1089,7 +1096,7 @@ a {
   .projects-section h2 {
     font-size: 2rem;
     text-align: left;
-    margin-left: 25px;
+    margin-left: -11rem;
   }
 
   .projects-container {
@@ -1103,6 +1110,8 @@ a {
   .project-card {
     max-width: 280px;
     margin: 0 auto;
+    margin-left: -5rem;
+    margin-top: 25px;
   }
 
   .project-card img {
@@ -1309,7 +1318,7 @@ a {
   .contact-section {
     padding: 60px 40px;
     margin-top: 40px;
-    scroll-margin-top: 120px;
+    scroll-margin-top: 50px;
   }
 
   .contact-heading {
