@@ -613,7 +613,7 @@ a {
 }
 
 /* Tablet styles (768px and below) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   #about {
     padding: 60px 40px;
     scroll-margin-top: 50px;
@@ -883,7 +883,7 @@ a {
 .skills__box .skill__item:nth-child(10) i { animation-delay: 0.9s; }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .skills__section {
     padding: 60px 40px;
     margin-top: -300px;
@@ -1088,7 +1088,7 @@ a {
   background-color: #0056b3;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .projects-section {
     padding: 60px 40px;
   }
@@ -1289,6 +1289,15 @@ a {
   color: #999;
 }
 
+.form-group{
+  transition: 0.5s ease;
+}
+
+.form-group:hover{
+  transform: scale(1.05);
+}
+
+
 .submit-btn {
   background-color: #00cc6a;
   color: #fff;
@@ -1314,7 +1323,7 @@ a {
   margin-left: 240px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .contact-section {
     padding: 60px 40px;
     margin-top: 40px;
