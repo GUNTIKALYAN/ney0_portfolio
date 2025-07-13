@@ -51,6 +51,7 @@ a {
     list-style: none;
     display: flex;
     gap: 2rem;
+    margin-right: 2rem;
 }
 
 .nav__link {
@@ -87,6 +88,25 @@ a {
   background: none;
   border: none;
 }
+
+.nav__chatbot {
+  /* margin-left: 1rem; */
+  display: flex;
+  align-items: right;
+}
+
+#chatbot-icon {
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#chatbot-icon:hover {
+  transform: scale(1.1);
+  color: #00e68a;
+}
+
 
 @media (max-width: 768px) {
   .nav__toggle {
