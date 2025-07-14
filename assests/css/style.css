@@ -51,7 +51,7 @@ a {
     list-style: none;
     display: flex;
     gap: 2rem;
-    margin-right: 2rem;
+    margin-left: 25rem;
 }
 
 .nav__link {
@@ -282,7 +282,7 @@ a {
 }
 
 /* Tablet styles (768px and below) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
     #home{
       margin-top: 50px;
     }
