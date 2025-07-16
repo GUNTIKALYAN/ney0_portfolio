@@ -108,7 +108,7 @@ a {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .nav__toggle {
     display: block;
     position: absolute;
@@ -139,6 +139,24 @@ a {
     padding-top: 1rem;
     text-align: center;
   }
+  .nav__chatbot {
+  /* margin-left: 1rem; */
+    display: flex;
+    margin-right: 50px;
+  }
+
+  #chatbot-icon {
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  #chatbot-icon:hover {
+    transform: scale(1.1);
+    color: #00e68a;
+  }
+
 }
 
 /* Home section */
