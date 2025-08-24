@@ -1,0 +1,26 @@
+{
+  "name": "Gunti Kalyan",
+  "role": "Web Developer | Data Science Enthusiast",
+  "education": [
+    "BSc Mathematics - GITAM University Hyderabad",
+    "PG in Data Science - VIT-AP University (Ongoing)"
+  ],
+  "skills": ["HTML", "CSS", "JavaScript", "React", "Python", "Flask", "Django", "Machine Learning"],
+  "projects": [
+    {
+      "title": "MoodCanvas – AI Mood Diary & WhatsApp Bot",
+      "desc": "A personalized personality development app that creates a unique alter ego companion.",
+      "link": "https://github.com/GUNTIKALYAN/MoodCanvas"
+    },
+    {
+      "title": "Bangalore House Price Prediction",
+      "desc": "Predicts property prices in Bangalore using ML and provides a WhatsApp bot interface.",
+      "link": "https://github.com/GUNTIKALYAN/Banglore_house_price_prediction"
+    }
+  ],
+  "contact": {
+    "email": "kalyansagar7008@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/gunti-kalyan-470b87252/",
+    "github": "https://github.com/GUNTIKALYAN"
+  }
+}
