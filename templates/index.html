@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assests/css/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> -->
 
     
     <title>portfolio</title>
@@ -21,7 +21,7 @@
                     <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#projects" class="nav__link">Projetcs</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
@@ -49,8 +49,8 @@
             </div>
 
             <div class="home_img">
-                <img src="assests/img/photo.jpg" alt="Profile pic">
-                <button class="resume-button" onclick="window.open('https://drive.google.com/file/d/1wBAQVrh_IwwBkNdztBdFg97_ZJbqWj2K/view?usp=sharing', '_blank')">View Resume</button>
+                <img src="static/img/photo.jpg" alt="Profile pic">
+                <button class="resume-button" onclick="window.open('https://drive.google.com/file/d/1e5xjzEUHpR8LeLFaV_F4GoiLm-mbVxIE/view?usp=sharing', '_blank')">View Resume</button>
             </div>
 
         </div>
@@ -63,7 +63,7 @@
             <h2 class="section__title scroll-left">About Me</h2>
             <div class="about__content">
                 <div class="about__image scroll">
-                <img src="/assests/img/photo.jpg" alt="About Image" />
+                <img src="/static/img/photo.jpg" alt="About Image" />
                 </div>
 
 
@@ -221,7 +221,7 @@
         </div>
     </section>
 
-    <div id="chatbot-icon"><i class="fa-solid fa-comment"></i></div>
+    <!-- <div id="chatbot-icon"><i class="fa-solid fa-comment"></i></div>
 
     <div id="chatbot-window">
         <div id="chatbot-header">Chat with me 🤖</div>
@@ -232,13 +232,41 @@
             <input type="text" id="chatbot-input" placeholder="Type a message...">
             <button id="chatbot-send"><i class="fa-solid fa-paper-plane"></i></button>
         </div>
+    </div> -->
+
+     <div id="chatbot-icon">
+        <i class="fa-solid fa-comment"></i>
     </div>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-window" class="hidden">
+        <div id="chatbot-header">
+            <!-- <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-5.png" alt="Bot Avatar"> -->
+            <div>
+                <h4>Kalyan's Assistant</h4>
+                <p>Always here to help</p>
+            </div>
+            <!-- <span id="chatbot-close">&times;</span> -->
+        </div>
+
+        <div id="chatbot-body">
+            <div class="message bot">
+                <p><b>Bot:</b> Hi! I’m Kalyan’s assistant. Ask me something </p>
+            </div>
+        </div>
+
+        <div id="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Type a message...">
+            <button id="chatbot-send"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
 
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="config.js"></script>
-    <script src="assests/js/style.js"></script>
-    <script src="assests/js/chatbot.js"></script>
+    <script src="static/js/style.js"></script>
+    <script src="static/js/chatbot.js"></script>
 
 </body>
 </html>
